@@ -12,7 +12,7 @@ export class AerolineaEntity {
   @Column()
   descripcion: string;
 
-  @Column({ type: 'timestamptz' })
+  @Column()
   fecha_fundacion: Date;
 
   @Column()
