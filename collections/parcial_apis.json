@@ -1,0 +1,2282 @@
+{
+	"info": {
+		"_postman_id": "41ca531f-635a-4026-9dd8-ccb308832ff0",
+		"name": "Parcial APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23045636"
+	},
+	"item": [
+		{
+			"name": "Aerolineas",
+			"item": [
+				{
+					"name": "Consultar Aerolineas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Consultar Aerolineas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "613"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"265-Toc3aonkz78wI9HK8S+0UCxrd08\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:25:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"7e6a98db-ca8f-4d65-8a33-70b7a6684c03\",\n        \"nombre\": \"lorem ipsum\",\n        \"descripcion\": \"lorem impsum lorem ipsum\",\n        \"fecha_fundacion\": \"2022-12-01T05:00:00.000Z\",\n        \"website\": \"https://foo.com/bar\",\n        \"aeropuertos\": []\n    },\n    {\n        \"id\": \"c05eb26a-2354-4ecc-8dde-ae386d9f8e6b\",\n        \"nombre\": \"lorem ipsum\",\n        \"descripcion\": \"lorem impsum lorem ipsum\",\n        \"fecha_fundacion\": \"2022-01-01T05:00:00.000Z\",\n        \"website\": \"https://foo.com/bar\",\n        \"aeropuertos\": []\n    },\n    {\n        \"id\": \"a9d1c33c-3777-4c1d-a452-3844a2861a3c\",\n        \"nombre\": \"lorem ipsum\",\n        \"descripcion\": \"lorem impsum lorem ipsum\",\n        \"fecha_fundacion\": \"2022-12-01T05:00:00.000Z\",\n        \"website\": \"https://foo.com/bar\",\n        \"aeropuertos\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Consultar aerolinea por id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Consultar aerolinea por id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-hXudvw5yD0yweb4rWCgnU9y1s7o\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:25:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7e6a98db-ca8f-4d65-8a33-70b7a6684c03\",\n    \"nombre\": \"lorem ipsum\",\n    \"descripcion\": \"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\": \"2022-12-01T05:00:00.000Z\",\n    \"website\": \"https://foo.com/bar\",\n    \"aeropuertos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Consultar aerolinea por id invalido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "7e6a98db-0000-4d65-8a33-70b7a6684c03"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Consultar aerolinea por id invalido",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "7e6a98db-0000-4d65-8a33-70b7a6684c03"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-iUAlMD9UKVX0nTkbcb3vIdeNsuU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:28:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Aerolinea no encontrada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Crear aerolinea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Crear aerolinea",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-YNxUuuT2hOG5aApprxGKjn5nGyA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:25:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nombre\": \"lorem ipsum\",\n    \"descripcion\": \"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\": \"2022-12-01\",\n    \"website\": \"https://foo.com/bar\",\n    \"aeropuertos\": [],\n    \"id\": \"7e6a98db-ca8f-4d65-8a33-70b7a6684c03\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar aerolinea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar aerolinea",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bf-41sAkgYm2CdRu1wN1uWUKyaErcQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:29:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7e6a98db-ca8f-4d65-8a33-70b7a6684c03\",\n    \"nombre\": \"lorem ipsum 2\",\n    \"descripcion\": \"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\": \"2022-12-01\",\n    \"website\": \"https://foo.com/bar\",\n    \"aeropuertos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar aerolinea invalida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "7e6a98db-0000-4d65-8a33-70b7a6684c03"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar aerolinea invalida",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "7e6a98db-0000-4d65-8a33-70b7a6684c03"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-iUAlMD9UKVX0nTkbcb3vIdeNsuU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:30:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Aerolinea no encontrada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar aerolinea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar aerolinea",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:30:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Eliminar aerolinea invalida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar aerolinea invalida",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "7e6a98db-ca8f-4d65-8a33-70b7a6684c03"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-iUAlMD9UKVX0nTkbcb3vIdeNsuU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:31:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Aerolinea no encontrada\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Aeropuertos",
+			"item": [
+				{
+					"name": "Consultar Aeropuertos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Consultar Aeropuertos",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8c-mwsQM1ET7k1HOvEL88WxAH5VGSA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:41:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"698cef64-a88a-4fb6-b06e-e544a72be714\",\n        \"nombre\": \"lorem ipsum\",\n        \"codigo\": \"code_1\",\n        \"ciudad\": \"bogota\",\n        \"pais\": \"colombia\",\n        \"aerolineas\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Consultar aeropuerto por id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aeropuertoId",
+									"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Consultar aeropuerto por id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aeropuertoId",
+											"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8a-D7pv4sWUJMXkPRjxLFSr+J0OJME\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:42:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"698cef64-a88a-4fb6-b06e-e544a72be714\",\n    \"nombre\": \"lorem ipsum\",\n    \"codigo\": \"code_1\",\n    \"ciudad\": \"bogota\",\n    \"pais\": \"colombia\",\n    \"aerolineas\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Consultar aeropuerto por id invalido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aeropuertoId",
+									"value": "698cef64-0000-4fb6-b06e-e544a72be714"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Consultar aeropuerto por id invalido",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aeropuertoId",
+											"value": "698cef64-0000-4fb6-b06e-e544a72be714"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-ptI0al5nTI15DHsLPLwU5jKkPzQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:47:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Aeropuerto no encontrado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Crear aeropuertos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_1\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Crear aeropuertos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_1\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8a-r0+z956kaUPuim6H8GkG+GlPloI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:41:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nombre\": \"lorem ipsum\",\n    \"codigo\": \"code_1\",\n    \"ciudad\": \"bogota\",\n    \"pais\": \"colombia\",\n    \"aerolineas\": [],\n    \"id\": \"698cef64-a88a-4fb6-b06e-e544a72be714\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar aeropuerto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_2\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aeropuertoId",
+									"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar aeropuerto",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_2\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aeropuertoId",
+											"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8a-Bzgx+KPDBQb6yhoFd3YNlhBCaVM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:48:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"698cef64-a88a-4fb6-b06e-e544a72be714\",\n    \"nombre\": \"lorem ipsum\",\n    \"codigo\": \"code_2\",\n    \"ciudad\": \"bogota\",\n    \"pais\": \"colombia\",\n    \"aerolineas\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar aeropuerto invalida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_2\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aeropuertoId",
+									"value": "698cef64-0000-4fb6-b06e-e544a72be714"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar aeropuerto invalida",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_2\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aeropuertoId",
+											"value": "698cef64-0000-4fb6-b06e-e544a72be714"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-ptI0al5nTI15DHsLPLwU5jKkPzQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:49:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Aeropuerto no encontrado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar aeropuerto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aeropuertoId",
+									"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar aerolinea",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aeropuertoId",
+											"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:50:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Eliminar aeropuerto invalida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"   pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aeropuertoId",
+									"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Eliminar aeropuerto invalida",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum 2\",\n    \"descripcion\":\"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\":\"2022-12-01\",\n    \"website\":\"https://foo.com/bar\",\n    \"aeropuertos\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aeropuertoId",
+											"value": "698cef64-a88a-4fb6-b06e-e544a72be714"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-ptI0al5nTI15DHsLPLwU5jKkPzQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 23:51:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Aeropuerto no encontrado\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Aerolineas-aeropuertos",
+			"item": [
+				{
+					"name": "Consultar aeropuerto de una aerolinea por su id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId",
+								"aeropuertos"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Consultar aeropuerto de una aerolinea por su id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId",
+										"aeropuertos"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c-q3DrHPzJ3Setu8B5RrVEKF00420\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:20:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"05b324a5-ddce-4c52-8d0f-cd92073c0210\",\n        \"nombre\": \"lorem ipsum\",\n        \"codigo\": \"code_1\",\n        \"ciudad\": \"bogota\",\n        \"pais\": \"colombia\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Consultar aeropuertos por aerolinea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+								},
+								{
+									"key": "aeropuertoId",
+									"value": "05b324a5-ddce-4c52-8d0f-cd92073c0210"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Incluir un aeropuerto a una aerolinea",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+										},
+										{
+											"key": "aeropuertoId",
+											"value": "05b324a5-ddce-4c52-8d0f-cd92073c0210"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"155-6AesrPBffzN45HmFIlmPIdHgKjY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:19:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"a238a60b-7c9b-40d5-ad55-2a88e823e4ad\",\n    \"nombre\": \"lorem ipsum\",\n    \"descripcion\": \"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\": \"2022-12-01T05:00:00.000Z\",\n    \"website\": \"https://foo.com/bar\",\n    \"aeropuertos\": [\n        {\n            \"id\": \"05b324a5-ddce-4c52-8d0f-cd92073c0210\",\n            \"nombre\": \"lorem ipsum\",\n            \"codigo\": \"code_1\",\n            \"ciudad\": \"bogota\",\n            \"pais\": \"colombia\",\n            \"aerolineas\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Incluir un aeropuerto a una aerolinea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"   pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos/:aeropuertoId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId",
+								"aeropuertos",
+								":aeropuertoId"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+								},
+								{
+									"key": "aeropuertoId",
+									"value": "05b324a5-ddce-4c52-8d0f-cd92073c0210"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Incluir un aeropuerto a una aerolinea",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos/:aeropuertoId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId",
+										"aeropuertos",
+										":aeropuertoId"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+										},
+										{
+											"key": "aeropuertoId",
+											"value": "05b324a5-ddce-4c52-8d0f-cd92073c0210"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"155-6AesrPBffzN45HmFIlmPIdHgKjY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:19:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"a238a60b-7c9b-40d5-ad55-2a88e823e4ad\",\n    \"nombre\": \"lorem ipsum\",\n    \"descripcion\": \"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\": \"2022-12-01T05:00:00.000Z\",\n    \"website\": \"https://foo.com/bar\",\n    \"aeropuertos\": [\n        {\n            \"id\": \"05b324a5-ddce-4c52-8d0f-cd92073c0210\",\n            \"nombre\": \"lorem ipsum\",\n            \"codigo\": \"code_1\",\n            \"ciudad\": \"bogota\",\n            \"pais\": \"colombia\",\n            \"aerolineas\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar aeropuertos de una aerolinea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_1\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId",
+								"aeropuertos"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Actualizar aeropuertos de una aerolinea",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\":\"lorem ipsum\",\n    \"codigo\":\"code_1\",\n    \"ciudad\":\"bogota\",\n    \"pais\":\"colombia\",\n    \"aerolineas\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId",
+										"aeropuertos"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "295"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"127-ZcFNYQ4MESBuWecJ51uB8NFsaT4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:43:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"a238a60b-7c9b-40d5-ad55-2a88e823e4ad\",\n    \"nombre\": \"lorem ipsum\",\n    \"descripcion\": \"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\": \"2022-12-01T05:00:00.000Z\",\n    \"website\": \"https://foo.com/bar\",\n    \"aeropuertos\": {\n        \"nombre\": \"lorem ipsum\",\n        \"codigo\": \"code_1\",\n        \"ciudad\": \"bogota\",\n        \"pais\": \"colombia\",\n        \"aerolineas\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar aeropuertos de una aerolinea Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"   pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aerolineas",
+								":aerolineaId",
+								"aeropuertos"
+							],
+							"variable": [
+								{
+									"key": "aerolineaId",
+									"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Actualizar aeropuertos de una aerolinea Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/aerolineas/:aerolineaId/aeropuertos",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aerolineas",
+										":aerolineaId",
+										"aeropuertos"
+									],
+									"variable": [
+										{
+											"key": "aerolineaId",
+											"value": "a238a60b-7c9b-40d5-ad55-2a88e823e4ad"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-CwRLb2PuEC/xBvaeYp1iPhstp8M\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:44:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"a238a60b-7c9b-40d5-ad55-2a88e823e4ad\",\n    \"nombre\": \"lorem ipsum\",\n    \"descripcion\": \"lorem impsum lorem ipsum\",\n    \"fecha_fundacion\": \"2022-12-01T05:00:00.000Z\",\n    \"website\": \"https://foo.com/bar\",\n    \"aeropuertos\": []\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:3000",
+			"type": "string"
+		}
+	]
+}
